@@ -20,7 +20,7 @@ class TestBank < Test::Unit::TestCase
 
 	# method named 'setup' used for cleaning data
 	def teardown
-		# puts "Clear data here!"	
+		# puts "Clear data here!"
 	end
 
 	# method starting with "test_" is interpreted as test case automatically

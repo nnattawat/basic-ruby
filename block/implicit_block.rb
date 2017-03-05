@@ -6,7 +6,7 @@ end
 
 hello { puts "Hello" }
 
-# Implicit block 
+# Implicit block
 def hello_person(name)
 	yield(name) if block_given?
 end

@@ -18,7 +18,7 @@ class MyClass
 	end
 end
 
-MyClass.say_hi 
+MyClass.say_hi
 # Hi arm
 
 MyClass.say_hi("nattawat")
@@ -42,3 +42,16 @@ MyClass.say_hi("arm")
 MyClass.say_hi("arm", "sand")
 # ["arm", "sand"]
 # Hi arm
+
+# Hash params with default values
+class MyClass
+	def self.say_hi(first: 'nattawat', last: 'nonsung')
+    puts "Hi, #{first} #{last}"
+	end
+end
+
+MyClass.say_hi
+# Hi, nattawat nonsung
+
+MyClass.say_hi(first: 'arm')
+# Hi, arm nonsung

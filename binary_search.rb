@@ -3,7 +3,7 @@
 def bsearch array, element, lower = 0, upper = nil
 
 	upper = array.count - 1 if upper.nil?
-	
+
 	return if lower > upper
 
 	mid = (upper + lower) / 2
@@ -21,5 +21,5 @@ end
 a = [1,2,3,4,5,6]
 puts bsearch a, 5
 
-# Or in build-in ruby function you can simply do 
+# Or in build-in ruby function you can simply do
 # a.find_index(5)

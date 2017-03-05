@@ -13,13 +13,14 @@ class AccessLevel
   def call_private
     private_method
   end
+
   protected
 
   def protected_method
     puts "Protected method. Sweet!"
   end
 
-  private 
+  private
 
   def private_method
     puts "Private method."
@@ -36,7 +37,7 @@ AccessLevel.new.call_private
 # Private method.
 
 AccessLevel.new.private_method
-# Error 
+# Error
 # NOTE: you can call private by AccessLevel.new.send(:private_method)
 
 Test.new.call_private_from_test

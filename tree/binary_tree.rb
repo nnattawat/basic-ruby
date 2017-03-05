@@ -1,4 +1,4 @@
-class Node 
+class Node
 	attr_accessor :value, :left, :right
 
 	def initialize(value=nil, left=nil, right=nil)
@@ -8,7 +8,7 @@ class Node
 	end
 
 	def self.insert(node, v, &block)
-		# binary tree insert without balancing, 
+		# binary tree insert without balancing,
     # block performs the comparison operation
     return Node.new(v) unless node
     if block.call(v, node.value) == -1 # less than
@@ -48,11 +48,11 @@ if $0 == __FILE__
     # a simple test case
     root = nil
     "chunkybacon".scan(/./m) {|c| root = Node.insert(root, c) {|a,b| a<=>b}} #<=> is eqaul to a.to_s == b.to_s
-    Node.visit(root, :postorder) {|v| print v} 
+    Node.visit(root, :postorder) {|v| print v}
 
     puts "\nFlatten the tree"
     fallten_tree = []
-    Node.visit(root, :postorder) {|v| fallten_tree << v} 
+    Node.visit(root, :postorder) {|v| fallten_tree << v}
     print fallten_tree
     puts "\n"
 end

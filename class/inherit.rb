@@ -25,6 +25,8 @@ class C < B
 
 	def self.hello
 		# call the parent method using super
+    # super without () mean use the same parameter as this method
+    # if it is not the same params. You have to call explicitly as super(a, b)
 		super
 		puts "hello overwritten"
 	end

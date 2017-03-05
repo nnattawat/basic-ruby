@@ -1,13 +1,13 @@
 module Enumerable # Add method to Array object
 	def word_count
 		h = Hash.new(0)
-		# 'text'.intern >>> :text 
+		# 'text'.intern >>> :text
 		each{|word| h[word.downcase.intern] += 1}
 		h
 
 		# code above can be replace with
-		# inject(Hash.new(0)) do |mem, val| 
-		# 	mem[val.downcase.intern] += 1 
+		# inject(Hash.new(0)) do |mem, val|
+		# 	mem[val.downcase.intern] += 1
 		# 	mem
 		# end
 	end
@@ -19,7 +19,7 @@ module Enumerable # Add method to Array object
 		h
 
 		# code above can be replace with
-		# inject(Hash.new{|hash, key| hash[key] = []}) do |mem, val|   
+		# inject(Hash.new{|hash, key| hash[key] = []}) do |mem, val|
 		# 	mem[val[0].downcase.intern] << val
 		# 	mem
 		# end
@@ -39,7 +39,7 @@ describe "Hash" do
 
 			h = Hash.new {|hash, key| hash[:key] = 0 }
 			expect(h[:any]).to eq(0)
-		end	
+		end
 
 		let(:str){"I will not go unless you go"}
 		it "create use hash to store word count" do

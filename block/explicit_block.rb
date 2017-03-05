@@ -8,7 +8,7 @@ hello do
 	puts "Hello"
 end
 
-# Explicit block 
+# Explicit block
 def hello_person(name, &hello)
 	hello.call(name) if block_given? # We can also call yield(name)
 end

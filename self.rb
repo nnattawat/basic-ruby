@@ -8,8 +8,8 @@ class WhatIsSelf
   end
 end
 
-WhatIsSelf.test 
+WhatIsSelf.test
  #=> At the class level, self is WhatIsSelf
 
-WhatIsSelf.new.test 
+WhatIsSelf.new.test
  #=> At the instance level, self is #<WhatIsSelf:0x28190>

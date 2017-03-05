@@ -11,7 +11,7 @@ class Person
 	end
 end
 
-p = Person.new 
+p = Person.new
 puts p.name
 # nil because @name defined below class Person is an instance variable belonging to the class object. Not the created object
 

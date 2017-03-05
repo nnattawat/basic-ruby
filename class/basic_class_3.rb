@@ -2,7 +2,7 @@ class Person
 	# we can replace getter and setter from person2 as attr_accessor
 	attr_accessor :name
 
-	def initialize name 
+	def initialize name
 		# @name = self.name
 		@name = name
 	end

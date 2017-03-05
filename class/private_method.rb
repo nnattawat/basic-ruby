@@ -14,7 +14,7 @@ class A < MyClass
 	def hello
 		super
 	end
-end 
+end
 
 A.new.hello
 # hello world

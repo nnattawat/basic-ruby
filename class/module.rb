@@ -24,29 +24,30 @@ module A
     puts 'a1 is called'
   end
 end
- 
+
 module B
   def b1
     puts 'b1 is called'
   end
 end
- 
+
 module C
   def c1
     puts 'c1 is called'
   end
 end
- 
+
+# use include to add module's method as a instance's medthod
 class Test
   include A
   include B
   include C
- 
+
   def display
     puts 'Modules are included'
   end
 end
- 
+
 object = Test.new
 object.display
 # Modules are included
@@ -55,5 +56,23 @@ object.a1
 object.b1
 # b1 is called
 object.c1
+# c1 is called
+
+# use extend to add module's method as a class's method
+class Test
+  extend A
+  extend B
+  extend C
+
+  def display
+    puts 'Modules are included'
+  end
+end
+
+Test.a1
+# a1 is called
+Test.b1
+# b1 is called
+Test.c1
 # c1 is called
 
